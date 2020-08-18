@@ -1,0 +1,23 @@
+{% include "layout.html" %}
+<nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+  <div class="container">
+    <a class="navbar-brand mr-4">Green Corridor</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarToggle">
+      <div class="navbar-nav mr-auto">
+        <a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
+        <a class="nav-item nav-link" href="{{ url_for('driverManagement') }}">Driver Management</a>
+        <a class="nav-item nav-link" href="{{ url_for('piManagement') }}">PI Management</a>
+        <a class="nav-item nav-link" href="{{ url_for('patientManagement') }}">Patient Management</a>
+        <a class="nav-item nav-link" href="{{ url_for('createGreenCorridor') }}">Create New Green Corridor</a>
+      </div>
+      <!-- Navbar Right Side -->
+      <div class="navbar-nav">
+        <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>        
+      </div>
+    </div>
+  </div>
+</nav>
+{% block content %}{% endblock %} 

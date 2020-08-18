@@ -1,0 +1,65 @@
+{% extends "layoutadmin.html" %}
+{% block content%}
+<main role="main" class="container">
+    <div class="row">
+        <div class="col-md-8">
+          <h1>Create New Green Corridor </h1>
+            <div class="content-section">
+                <form method="POST" action="">
+                    {{ form.hidden_tag() }}
+                    <fieldset class="form-group">
+                        <!-- <legend class="border-bottom mb-4">New Driver</legend> -->
+                        <div class="form-group">
+                            {{ form.source.label(class="form-control-label") }}
+
+                            {% if form.source.errors %}
+                                {{ form.source(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.source.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.source(class="form-control form-control-lg") }}
+                            {% endif %}     
+                        </div>
+                        <div class="form-group">
+                            {{ form.destination.label(class="form-control-label") }}
+
+                            {% if form.destination.errors %}
+                                {{ form.destination(class="form-control form-control-lg is-invalid") }}
+                                <div class="invalid-feedback">
+                                    {% for error in form.destination.errors %}
+                                        <span>{{ error }}</span>
+                                    {% endfor %}
+                                </div>
+                            {% else %}
+                                {{ form.destination(class="form-control form-control-lg") }}
+                            {% endif %}
+                        </div>
+                        <script type="text/javascript" >
+                            function initAutocomplete() {
+                                var input = document.getElementById('source');
+                                var searchBox = new google.maps.places.SearchBox(input);
+                                document.write(searchBox)
+
+                                var input = document.getElementById('destination');
+                                var searchBox1 = new google.maps.places.SearchBox(input);
+                                document.write(searchBox1)
+                            }
+                        </script>
+                        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB5InCXr1LJmo9xOvoLX21AanL2bImGPoU&libraries=places&callback=initAutocomplete"async defer></script>
+                        <div class="form-group">
+                            {{ form.submit(class="btn btn-outline-info") }}
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+
+        </div>
+    </div>
+</main>
+{% endblock %}

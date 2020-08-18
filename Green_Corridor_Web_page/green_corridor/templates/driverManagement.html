@@ -1,0 +1,146 @@
+{% extends "layoutadmin.html" %}
+{% block content%}
+<main role="main" class="container">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> -->
+	<!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
+ 
+    <div class="row">
+        <div class="col-md-8">
+
+        	<ul class="nav nav-pills">
+        	    <li class="active"><a data-toggle="pill" href="#newDriver">Add New Driver .</a></li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        	    <li><a data-toggle="pill" href="#allDriverDetails">.   All Drivers Details   .</a></li> &nbsp;
+        	    <li><a data-toggle="pill" href="#updateDriver">.   Update Driver Delails     .</a></li> &nbsp;
+        	    <li><a data-toggle="pill" href="#delete">.   Delete Driver    .</a></li> 
+        	 </ul> 
+
+        	<div class="tab-content">
+        	   <div id="newDriver" class="tab-pane fade in active">
+        	 		<div class="content-section">
+        	 		    <form method="POST" action="">
+        	 		        {{ form.hidden_tag() }}
+        	 		        <fieldset class="form-group">
+        	 		            <legend class="border-bottom mb-4">New Driver</legend>
+        	 		            <div class="form-group">
+        	 		                {{ form.name.label(class="form-control-label") }}
+
+        	 		                {% if form.name.errors %}
+        	 		                    {{ form.name(class="form-control form-control-lg is-invalid") }}
+        	 		                    <div class="invalid-feedback">
+        	 		                        {% for error in form.name.errors %}
+        	 		                            <span>{{ error }}</span>
+        	 		                        {% endfor %}
+        	 		                    </div>
+        	 		                {% else %}
+        	 		                    {{ form.name(class="form-control form-control-lg") }}
+        	 		                {% endif %}
+        	 		            </div>
+        	 		            <div class="form-group">
+        	 		                {{ form.email.label(class="form-control-label") }}
+        	 		                {% if form.email.errors %}
+        	 		                    {{ form.email(class="form-control form-control-lg is-invalid") }}
+        	 		                    <div class="invalid-feedback">
+        	 		                        {% for error in form.email.errors %}
+        	 		                            <span>{{ error }}</span>
+        	 		                        {% endfor %}
+        	 		                    </div>
+        	 		                {% else %}
+        	 		                    {{ form.email(class="form-control form-control-lg") }}
+        	 		                {% endif %}
+        	 		            </div>
+        	 		            <div class="form-group">
+        	 		                {{ form.mobile_no.label(class="form-control-label") }}
+        	 		                {% if form.mobile_no.errors %}
+        	 		                    {{ form.mobile_no(class="form-control form-control-lg is-invalid") }}
+        	 		                    <div class="invalid-feedback">
+        	 		                        {% for error in form.mobile_no.errors %}
+        	 		                            <span>{{ error }}</span>
+        	 		                        {% endfor %}
+        	 		                    </div>
+        	 		                {% else %}
+        	 		                    {{ form.mobile_no(class="form-control form-control-lg") }}
+        	 		                {% endif %}
+        	 		            </div>
+        	 		            <div class="form-group">
+        	 		                {{ form.assign_password.label(class="form-control-label") }}
+        	 		                {% if form.assign_password.errors %}
+        	 		                    {{ form.assign_password(class="form-control form-control-lg is-invalid") }}
+        	 		                    <div class="invalid-feedback">
+        	 		                        {% for error in form.assign_password.errors %}
+        	 		                            <span>{{ error }}</span>
+        	 		                        {% endfor %}
+        	 		                    </div>
+        	 		                {% else %}
+        	 		                    {{ form.assign_password(class="form-control form-control-lg") }}
+        	 		                {% endif %}
+        	 		            </div>
+        	 		            <div class="form-group">
+        	 		                {{ form.confirm_password.label(class="form-control-label") }}
+        	 		                {% if form.confirm_password.errors %}
+        	 		                    {{ form.confirm_password(class="form-control form-control-lg is-invalid") }}
+        	 		                    <div class="invalid-feedback">
+        	 		                        {% for error in form.confirm_password.errors %}
+        	 		                            <span>{{ error }}</span>
+        	 		                        {% endfor %}
+        	 		                    </div>
+        	 		                {% else %}
+        	 		                    {{ form.confirm_password(class="form-control form-control-lg") }}
+        	 		                {% endif %}
+        	 		            </div>
+        	 		        </fieldset>
+        	 		        <div class="form-group">
+        	 		            {{ form.submit(class="btn btn-outline-info") }}
+        	 		        </div>
+        	 		    </form>
+        	 		</div>
+        	   </div>
+        	   <div id="allDriverDetails" class="tab-pane fade">
+        	       <div class="container">
+                     <h2>Table</h2>                                                                              
+                     <div class="table-responsive">          
+                     <table class="table">
+                       <thead>
+                         <tr>
+                           <th>Driver Name</th>
+                           <th>Email</th>
+                           <th>Mobile No.</th>
+                           <th>Alloted Patient ID</th>
+                           <th>Latitude</th>
+                           <th>Longitude</th>
+                         </tr>
+                       </thead>
+
+                        {% for doc in docs %}
+                            <tbody>
+                              <tr>
+                                <td>{{ doc['d_name'] }}</td>
+                                <td>{{ doc['d_email'] }}</td>
+                                <td>{{ doc['d_mobile'] }}</td>
+                                <td>{{ doc['p_email'] }}</td>
+                                <td>{{ doc['d_latitude'] }}</td>
+                                <td>{{ doc['d_longitude'] }}</td>
+                              </tr>
+                            </tbody>
+                        {% endfor %}
+                     </table>
+                     </div>
+                   </div>
+        	   </div>
+        	   <div id="updateDriver" class="tab-pane fade">
+        	     <h3>Menu 2</h3>
+        	     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+        	   </div>
+        	   <div id="delete" class="tab-pane fade">
+        	     <h3>Menu 3</h3>
+        	     <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        	   </div>
+        	</div>
+        </div>
+        <div class="col-md-4">
+          
+        </div>
+    </div>
+</main>	
+{% endblock %}

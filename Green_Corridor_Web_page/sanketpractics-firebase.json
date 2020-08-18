@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "sanketpractics",
+  "private_key_id": "9dc813fc3e7461712328b7f03199ee857eb5acb4",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDvT7DPuiyN749n\nd+E8ciCE8GXqaiuQoWuunQ+kwhUNrvdLTiIJQ4vtsiTIqKKT4l1UoB+1+iy4Czdo\nfErByKe3Ye3E6xJFDPYOqbFjStfiT6GN8nK9z73Lx2BzvDS7D7AmZeUfj7/IrG3W\nwZEmnnpON47YiI42gekYU1Z81Pyu50i3NRPvuP6/nV/NNskwoFxAIP93iSXPxFPH\nZOiyQsG0kuu/HtoToyIkWa367FApNUwWzQlGjl0a/l//3QVvpvEP33/6sHEbnVKx\n1j1svvTZMUuv1W1STdKaEjH2Irk1TQ/7chIipryfhsIaw91WMNAaCz4T8K+SwBFt\nxQhDKZl/AgMBAAECggEAb8cGLBCmjOlPTyHUZ5pbDB0JTXOnw5dSJ64ex3MLyGdo\nBJmLFk6hhjXGLp9tyKtbspJUHXir+I7so3YiqN7jT6mDGI4/61bBe1nRjDJCIefV\n6upKo9Prr8oBiC1pZ9JNEbJYUeSfzMiVSVECTkqJkA0tQICQBG+rg3wxkn8dQ0fH\nE6r2uTcWsctH0ZHr4qeqSlJDxb7v3refDaxdolS6F1PiC12NGxCp9ZxCAfdA1m8v\n+nf48x93IMcTXX98a13BkJ0DoaBmaF8iZq1iTTeu5flzYZBbAfDo7VHSEfjxdr+u\nQq8TcE/LIaURFjxlN/gKZbMkGnNj0HDXrIkgFPt/wQKBgQD7hgr69cmu4ud+DGsO\nROpjkaI4ud5KRpzU8fNXuFd9Ap847duScoA6QcvAjWiyaDJaUrZgSiYsZbhvDS60\nhiriYlSLdGepqdvr50OlSwAFKm16VjJJ6El3po7KpcOMFjZYpjmWMqOLgmMpBM7/\nYnvyXY4I6QUuKCeaiKget6NNYQKBgQDzkgH6GT020OCFCsTPZZ0gGLnRgQV1DMz1\nnpQrfD6+jVJ7UYVxqCE3XV0D8o8bz+oHDX20oGCCzB6GcLZyEpZZ6I5Bqv1AonUE\nBpiB0HUhutJKidGZMjyH29CMjmAAI6/rAT6wPrKz238EKcXWh+wCPjQELBYuA3dB\nBG8fs/Ry3wKBgQDxVn2ErX/WSau7W2kBaQjJfvx7l4R+GmDzRjCqs5tmvLRQKJJt\nY2Y7/9PkLwsNXEMsPX72x073fKbKD4kH+FB/pb/fi1LIDc6R/PYATQV472vaXYil\nN7f+kZcjRIhsCwgcaWqJ/o7EFtjUi+OeUj4BoNjfHc81qZvOgF9oEeYkIQKBgQDa\nAg647wxGWxEKo8fipl3L07XGGkhrKwjss4KFpZB3eACiliXtxAHvDybpGJsU1rTu\nmRmxqXaYu+B6jroOQirG0Is7pbNFveMktk6cqpuclB4TT2YGS9u38nyoweqVVVvo\n6VVV5NiIeWcnr8f/K+uHWmuubFNx3fJIhJJ9+tFKWwKBgE2EHsOHuLb8w150amtK\nI6qh4kcKpYBVzgaLbv1Zs8AvQqqeu301aog2SCU+7ceK3ZWsBmTQ+Sz/aeuSSqcj\noeXv3In8rXGLm+er0F/WltsFIQp5tVX5128bFKtLuSFIBLcqGQ3esJglSsV58T3u\nT7p3DYpsiqjvQ37IpWq9bPWi\n-----END PRIVATE KEY-----\n",
+  "client_email": "firebase-adminsdk-owkrd@sanketpractics.iam.gserviceaccount.com",
+  "client_id": "110050405431903660363",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-owkrd%40sanketpractics.iam.gserviceaccount.com"
+}
